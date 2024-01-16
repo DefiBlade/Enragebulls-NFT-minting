@@ -1,0 +1,115 @@
+.header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 90%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    .external {
+        display: flex;
+
+        .link {
+            display: flex;
+            align-items: center;
+
+            .link-title {
+                padding-left: 10px;
+                font-size: 18px;
+                font-weight: 500;
+                color: rgb(255, 255, 255);
+            }
+        }
+    }
+
+    .title {
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        line-height: 44px;
+    }
+
+    .navigation {
+        display: flex;
+
+        a {
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 20px;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .collapse {
+        display: none;
+        i {
+            color: white;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        .title {
+            -webkit-box-pack: center;
+            justify-content: center;
+            font-size: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            padding-left: 12px;
+            margin-top: 12px;
+            text-overflow: ellipsis;
+        }
+
+        .navigation {
+            display: none;
+        }
+        
+        .external {
+            .link {
+                padding-right: 10px;
+                padding-left: 10px;
+                img {
+                    width: 35px;
+                }
+                .link-title {
+                    display: none;
+                }
+            }
+        }
+
+        .collapse {
+            display: block;
+            .collapse-navbar {
+                position: absolute;
+                display: none;
+                max-width: 200px;
+                width: 100%;
+                flex-direction: column;
+                background-color: black;
+
+                a {
+                    padding: 12px 12px;
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .collapse:hover {
+            .collapse-navbar {
+                display: flex;
+            }
+        }
+    }
+}

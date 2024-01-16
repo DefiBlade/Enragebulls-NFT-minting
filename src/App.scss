@@ -1,0 +1,28 @@
+.App {
+    background: url('./assets/images/Group-5_1.png');
+    background-size: 100% 100%;
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    min-height: 100vh;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url('./assets/fonts/Poppins-Regular.ttf');
+}
+
+.notification-container {
+    width: 600px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .notification-container {
+        width: 80%;
+        font-size: 15px;
+    }
+}

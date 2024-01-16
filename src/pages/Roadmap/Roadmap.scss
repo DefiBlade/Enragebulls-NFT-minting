@@ -1,0 +1,63 @@
+.roadmap {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 940px;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: rgb(255, 255, 255);
+
+    .title {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-family: Poppins, sans-serif;
+        font-size: 45px;
+        line-height: 51px;
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+        
+    }
+
+    .row::before {
+        content: " ";
+        display: table;
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .row {
+        display: flex;
+        margin-left: -10px;
+        margin-right: -10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-top: 1px solid rgb(117, 117, 117);
+        border-bottom: 1px solid rgb(117, 117, 117);
+        font-size: 18px;
+
+        .column {
+            width: 50%;
+            min-height: 1px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .roadmap {
+        .row {
+            flex-direction: column;
+            text-align: center;
+
+            .column {
+                width: 100%;
+            }
+
+            .column:last-of-type {
+                padding-top: 12px;
+            }
+        }
+    }
+}

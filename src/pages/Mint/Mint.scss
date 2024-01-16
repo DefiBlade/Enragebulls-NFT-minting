@@ -1,0 +1,203 @@
+.mint {
+    display: grid;
+    max-width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: rgb(255, 255, 255);
+    grid-template-rows: auto;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 16px;
+    .date {
+        text-align: center;
+        width: 600px;
+        height: 420px;
+        border-radius: 14px;
+        background-color: rgb(125, 104, 187);
+        background-image: linear-gradient(rgb(125, 104, 187), rgb(33, 52, 160));
+        .date-title {
+            max-width: 90%;
+            margin: 40px auto 21px;
+            color: rgb(255, 255, 255);
+            font-size: 27px;
+            font-weight: 500;
+            text-align: left;
+        }
+        .date-clock {
+            grid-auto-columns: 1fr;
+            gap: 16px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            text-align: center;
+            .clock-item {
+                display: inline-block;
+                width: 120px;
+                margin: 5px 10px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                grid-auto-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto;
+                border-radius: 10px;
+                background-color: rgb(154, 124, 239);
+                background-image: linear-gradient(rgb(154, 124, 239), rgb(40, 59, 156));
+                color: rgb(255, 255, 255);
+                .clock-item-title {
+                    font-size: 50px;
+                    line-height: 50px;
+                    font-weight: 500;
+                    text-align: center;
+                }
+                .clock-item-unit {
+                    font-weight: 500;
+                    text-align: center;
+                }
+            }
+        }
+        .mint-select {
+            width: 90%;
+            display: inline-block;
+            position: relative;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 900;
+            .select {
+                display: flex;
+                margin-top: 40px;
+                -webkit-box-pack: start;
+                justify-content: flex-start;
+                -webkit-box-align: center;
+                align-items: center;
+                border: 1px solid rgb(236, 192, 81);
+                border-radius: 12px;
+                background-color: rgb(108, 98, 143);
+                position: relative;
+                vertical-align: top;
+                text-decoration: none;
+                color: rgb(34, 34, 34);
+                padding: 20px;
+                text-align: left;
+                margin-left: auto;
+                margin-right: auto;
+                white-space: nowrap;
+                cursor: pointer;
+                .icon {
+                    color: rgb(255, 255, 255);
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    margin: auto 20px auto auto;
+                    width: 1em;
+                    height: 1em;
+                }
+                .placeholder {
+                    color: rgb(255, 255, 255);
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+            .mint-list {
+                border-radius: 12px;
+                position: absolute;
+                background: rgb(221, 221, 221);
+                display: none;
+                min-width: 100%;
+                .mint-link {
+                    cursor: pointer;
+                    border-bottom: 1px solid rgb(130, 122, 160);
+                    background-color: rgb(108, 98, 143);
+                    color: rgb(255, 255, 255);
+                    font-weight: 500;
+                    padding: 10px 20px;
+                    display: block;
+                    position: relative;
+                    text-decoration: none;
+                    text-align: left;
+                    margin-left: auto;
+                    margin-right: auto;
+                    white-space: nowrap;
+                }
+                .mint-link:first-of-type {
+                    border-radius: 10px 10px 0px 0px;
+                }
+                .mint-link:last-of-type {
+                    border-radius: 0px 0px 10px 10px;
+                }
+                .mint-link:hover {
+                    background-color: rgb(129, 117, 166);
+                }
+            }
+        }
+        .mint-operation {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            padding: 15px 100px;
+            border-radius: 6px;
+            background-color: rgb(236, 192, 81);
+            font-weight: 900;
+            font-size: 16px;
+            display: inline-block;
+            color: rgb(255, 255, 255);
+            border: 0px;
+            line-height: inherit;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    .mint-description {
+        align-self: center;
+        padding-left: 60px;
+        color: rgb(255, 255, 255);
+        .title {
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            margin-top: 20px;
+            font-size: 38px;
+            line-height: 44px;
+            font-weight: 500;
+        }
+        .description {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .mint {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+        .date {
+            width: 100%;
+            height: auto;
+            .date-title {
+                text-align: center;
+            }
+            .mint-operation {
+                max-width: 90%;
+                width: 60%;
+                padding: 20px 0px;
+                text-align: center;
+            }
+        }
+        .mint-description {
+            padding-left: 0px;
+            .title {
+                font-size: 28px;
+                font-weight: 500;
+            }
+        }
+    }
+}
